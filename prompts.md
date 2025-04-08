@@ -1,21 +1,33 @@
-Linux
+## Linux
 ```
-Using bash languaje, create two arrays called pci and device, taken form lspci -P and divided by the first space.
+Using linux bash commands
 
-create a function called macpci, that convert 00.0 to Pci(0x0,0x0) but avoiding every numeric values ​​having a leading zero
+create two arrays called pci and devicename, taken form lspci -P divided by the first " ".
 
-In every value from pci array:
-Remove "00:"
-AND
-if has /, divide value with / and apply macpci and join again parts with /
-else apply macpci function
+From pci array, convert every value to string
+From pci array, in every value remove all "00:"
+From pci array, in every value remove all "."
+From pci array, in every value remove all " "
 
-Print "PciRoot(0x1)/" plus every pci value plus space plus every device value.
+Create a function called macpci
+into macpci function, create 2 variables called bus and device
+if (first character of the argument is zero) { bus variable is the second character of the argument }
+if (first character of the argument is not zero)  { bus variable is the first character of the argument plus second characters of the argument }
+if (fourth character of the argument does not exists) { device variable is the third character of the argument }
+if (fourth character of the argument exists) { device variable is the third characters of the argument plus fourth characters of the argument }
+macpi function returns: "Pci(0x"bus",0x"device")" 
+
+In every value of pci array, divide value by / and convert every part with macpci function and join all parts again with "/"
+
+Create a for loop using devicename lenght as index, that print "PciRoot(0x1)/"pci devicename 
+
+Export all printed into macos-pciroot.txt
+Show macos-pciroot.txt content
+
+Unset all functions and all variables created
 ```
-
-AI used: [Duck.AI](https://duck.ai/)
-
-Windows
+---
+## Windows
 ```
 Using PowerShell commands 
 
