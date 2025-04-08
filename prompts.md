@@ -24,10 +24,10 @@ Create one more array called LocationPaths, taken from Get-PnpDeviceProperty -Ke
 
 Create a function called macpci, 
 into macpci function, create 2 variables called bus and device
-if (first character of the agument is zero) { bus variable is the second characters of the argument }
-if (first character of the agument is not zero)  { bus variable is the first characters of the argument plus second characters of the argument }
-if (third character of the agument is zero) { device variable is the fourth characters of the argument }
-if (third character of the agument is not zero) { device variable is the third characters of the argument plus fourth characters of the argument }
+if (first character of the argument is zero) { bus variable is the second character of the argument }
+if (first character of the argument is not zero)  { bus variable is the first character of the argument plus second character of the argument }
+if (third character of the argument is zero) { device variable is the fourth character of the argument }
+if (third character of the argument is not zero) { device variable is the third character of the argument plus fourth character of the argument }
 the function returns:  "Pci(0x" plus bus plus ",0x" plus device plus ")" 
 
 From LocationPath array, remove all values with ACPI
