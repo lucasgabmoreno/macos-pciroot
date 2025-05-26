@@ -4,7 +4,8 @@ PCI lister in MacOS format
 <br>
 
 ## :penguin: Linux
-Download [macos-pciroot.sh](macos-pciroot.sh) and run into terminal:
+1. Download [macos-pciroot.sh](macos-pciroot.sh)
+2. Run into terminal:
 ```
 /macos-pciroot.sh
 ```
